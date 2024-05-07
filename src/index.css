@@ -1,0 +1,260 @@
+body {
+  --font-size-default: 16px;
+  --font-family-default: "Lato", Helvetica, Arial, sans-serif;
+
+  font-size: var(--font-size-default);
+  font-family: var(--font-family-default);
+  color: var(--color-text-default);
+  font-weight: 400;
+
+  --color-theme-main: #2d5780;
+  --color-theme-main-dark: #112136;
+  --color-theme-secondary: #fffcf3;
+  --color-theme-secondary-dark: #dadada;
+  --color-text-default: #151515;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a,
+a:visited {
+  color: var(--color-text-default);
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 3rem 0rem 3rem;
+  width: 800px;
+  min-width: 300px;
+  min-height: 100vh;
+}
+
+.content > * {
+  margin-bottom: 4rem;
+}
+
+nav {
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+}
+
+nav li:hover,
+.project h4:hover,
+a:hover,
+footer li:hover {
+  color: var(--color-theme-main);
+  cursor: pointer;
+}
+
+nav li:last-of-type {
+  background-image: url("/moon_black.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+}
+
+nav li:last-of-type:hover {
+  background-image: url("/moon_blue.svg");
+}
+
+.hero p {
+  width: 60%;
+  font-size: 1.75rem;
+}
+
+.hero img {
+  scale: 0.75;
+  position: absolute;
+  left: 60%;
+  top: 6%;
+}
+
+.about > * {
+  margin-bottom: 1rem;
+}
+
+.projects h3,
+.projects li {
+  margin-bottom: 1rem;
+}
+
+.project {
+  display: flex;
+}
+
+.project img {
+  width: 300px;
+  height: 150px;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.projectDescription {
+  margin-left: 4rem;
+}
+
+.projectDescription h4,
+.projectDescription p:nth-child(2) {
+  margin-bottom: 1rem;
+}
+
+.projectsTech {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.projectsTech li {
+  color: var(--color-theme-secondary);
+  background-color: var(--color-theme-main);
+  text-align: center;
+  height: 2rem;
+  /* This padding is responsible mainly for centering text inside a box, centering vertically was the problem. I didn't want to use buttons, because there is nothing to "press" here; makes no sense to create so many buttons. */
+  padding: 0.25rem 1rem 0 1rem;
+  border-radius: 5px;
+}
+
+.content > ul:last-of-type {
+  display: flex;
+  justify-content: center;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footerIconGithub {
+  background-image: url("/github.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.footerIconLinkedin {
+  background-image: url("/linkedin.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.footerIconTop {
+  background-image: url("/arrow-up-circle.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+::selection {
+  background-color: var(--color-theme-main);
+  color: var(--color-theme-secondary);
+}
+
+/* Resource to check & learn more: */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark */
+
+/* Everything related to dark mode: */
+body.darkMode {
+  background-color: var(--color-theme-main-dark);
+  color: var(--color-theme-secondary-dark);
+
+  a {
+    color: var(--color-theme-secondary-dark);
+  }
+
+  a:hover,
+  li:hover,
+  h4:hover {
+    color: var(--color-theme-secondary-dark);
+  }
+
+  .project img {
+    box-shadow: rgba(31, 31, 31, 0.7) 0px 8px 24px;
+  }
+
+  .projectsTech li {
+    background-color: var(--color-theme-secondary-dark);
+    color: var(--color-theme-main-dark);
+  }
+
+  nav li:last-of-type {
+    background-image: url("/sun_white.svg");
+    background-repeat: no-repeat;
+    width: 20px;
+  }
+
+  nav li:last-of-type:hover {
+    background-image: url("/sun_white.svg");
+  }
+
+  .footerIconGithub {
+    background-image: url("/github_white.svg");
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+  }
+
+  .footerIconLinkedin {
+    background-image: url("/linkedin_white.svg");
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+  }
+
+  .footerIconTop {
+    background-image: url("/arrow-up-circle_white.svg");
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+  }
+
+  .hero img {
+    filter: invert(1);
+  }
+
+  ::selection {
+    color: var(--color-theme-main-dark);
+    background-color: var(--color-theme-secondary-dark);
+  }
+}
