@@ -61,8 +61,8 @@ h4 {
 .content {
   display: flex;
   flex-direction: column;
-  padding: 1rem 3rem 0rem 3rem;
-  width: 800px;
+  padding: 1rem 1rem 0rem 1rem;
+  width: 90%;
   min-width: 300px;
   min-height: 100vh;
 }
@@ -72,9 +72,9 @@ h4 {
 }
 
 nav {
-  display: flex;
-  width: 90%;
+  width: 100%;
   justify-content: space-evenly;
+  display: flex;
 }
 
 nav li:hover,
@@ -101,14 +101,18 @@ nav li:last-of-type:hover {
 }
 
 .hero img {
-  scale: 0.75;
+  scale: 0.55;
   position: absolute;
-  left: 60%;
-  top: 6%;
+  left: 48%;
+  top: 14%;
 }
 
 .about > * {
   margin-bottom: 1rem;
+}
+
+.about {
+  width: 95%;
 }
 
 .projects h3,
@@ -116,21 +120,13 @@ nav li:last-of-type:hover {
   margin-bottom: 1rem;
 }
 
-.project {
-  display: flex;
-}
-
 .project img {
-  width: 300px;
-  height: 150px;
+  margin-top: 1rem;
+  width: 80vw;
   margin-bottom: 2rem;
   border-radius: 5px;
 
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-.projectDescription {
-  margin-left: 4rem;
 }
 
 .projectDescription h4,
@@ -142,16 +138,19 @@ nav li:last-of-type:hover {
   display: flex;
   gap: 1rem;
   align-items: center;
+
+  gap: 0.5rem;
 }
 
 .projectsTech li {
   color: var(--color-theme-secondary);
   background-color: var(--color-theme-main);
   text-align: center;
-  height: 2rem;
   /* This padding is responsible mainly for centering text inside a box, centering vertically was the problem. I didn't want to use buttons, because there is nothing to "press" here; makes no sense to create so many buttons. */
-  padding: 0.25rem 1rem 0 1rem;
+  padding: 0.25rem 0.5rem 0 0.5rem;
   border-radius: 5px;
+  font-size: 0.75rem;
+  height: 1.5rem;
 }
 
 .content > ul:last-of-type {
@@ -256,5 +255,68 @@ body.darkMode {
   ::selection {
     color: var(--color-theme-main-dark);
     background-color: var(--color-theme-secondary-dark);
+  }
+}
+
+/* Everything related to responsive design */
+
+/* Applies to widths 600 or more */
+@media only screen and (min-width: 600px) {
+  .content {
+    width: 90%;
+    padding: 1rem 2rem 0rem 2rem;
+  }
+  nav {
+    width: 90%;
+  }
+  .hero img {
+    scale: 0.65;
+    left: 60%;
+    top: 6%;
+  }
+  .project img {
+    width: 70vw;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    max-width: 600px;
+  }
+  .projectDescription {
+    max-width: 550px;
+  }
+  .projectsTech {
+    gap: 1rem;
+  }
+  .projectsTech li {
+    font-size: 1rem;
+    height: 2rem;
+    padding: 0.25rem 1rem 0 1rem;
+  }
+}
+
+/* Applies to widths 850 or more */
+@media only screen and (min-width: 850px) {
+  .content {
+    width: 800px;
+    padding: 1rem 3rem 0rem 3rem;
+  }
+  .hero img {
+    scale: 0.75;
+  }
+  .about {
+    width: 100%;
+  }
+  .project {
+    display: flex;
+    flex-direction: row;
+  }
+  .project img {
+    margin-top: 0rem;
+    width: 300px;
+    height: 150px;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+  }
+  .projectDescription {
+    margin-left: 4rem;
   }
 }
