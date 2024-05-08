@@ -6,7 +6,11 @@ export default function Projects() {
         <li className="project">
           <img src="./apollo_prev_1.png" alt="project preview image" />
           <div className="projectDescription">
-            <h4>Apollo Coffee</h4>
+            <h4>
+              <a href="https://nextjs-project-apollo.vercel.app/">
+                Apollo Coffee{" "}
+              </a>
+            </h4>
             <p>
               Ecommerce website with a focus on showcasing a wide range of
               products. Uses lots of Next.js routing, React Components & CSS
