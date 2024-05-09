@@ -7,7 +7,10 @@ export default function Projects() {
           <img src="./apollo_prev_1.png" alt="project preview image" />
           <div className="projectDescription">
             <h4>
-              <a href="https://nextjs-project-apollo.vercel.app/">
+              <a
+                target="_blank"
+                href="https://nextjs-project-apollo.vercel.app/"
+              >
                 Apollo Coffee{" "}
               </a>
             </h4>
@@ -27,7 +30,14 @@ export default function Projects() {
         <li className="project">
           <img src="./daily_prev_0.png" alt="project preview image" />
           <div className="projectDescription">
-            <h4>Daily</h4>
+            <h4>
+              <a
+                target="_blank"
+                href="https://mateuszurban.github.io/project-todo-react/"
+              >
+                Daily
+              </a>
+            </h4>
             <p>
               Task-management goal-oriented app, with intended use of setting
               daily goals. MLP created with Tailwind CSS and React.
