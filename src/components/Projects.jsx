@@ -25,6 +25,21 @@ export default function Projects() {
           </div>
         </li>
         <li className="project">
+          <img src="./daily_prev_0.png" alt="project preview image" />
+          <div className="projectDescription">
+            <h4>Daily</h4>
+            <p>
+              Task-management goal-oriented app, with intended use of setting
+              daily goals. MLP created with Tailwind CSS and React.
+            </p>
+            <ul className="projectsTech">
+              <li>React</li>
+              <li>Tailwind CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+        </li>
+        <li className="project">
           <img src="./portfolio_prev_0.png" alt="project preview image" />
           <div className="projectDescription">
             <h4>Personal website</h4>
