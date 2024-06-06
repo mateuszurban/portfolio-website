@@ -4,14 +4,37 @@ export default function Projects() {
       <h3 id="projects">Projects</h3>
       <ul>
         <li className="project">
-          <img src="./apollo_prev_1.png" alt="project preview image" />
+          <img src="./home_prev_0.png" alt="project preview image" />
+          <div className="projectDescription">
+            <h4>
+              <a
+                target="_blank"
+                href="https://mateuszurban.github.io/ecommerce-react/"
+              >
+                @HOME - React e-commerce{" "}
+              </a>
+            </h4>
+            <p>
+              Mobile first e-commerce developed with React and React Router.
+              Focused on RWD, with emphasis on images and clean design.
+            </p>
+            <ul className="projectsTech">
+              <li>React</li>
+              <li>React Router</li>
+              <li>RWD</li>
+            </ul>
+          </div>
+        </li>
+        <li className="project">
+          <img src="./apollo_prev_0.png" alt="project preview image" />
+
           <div className="projectDescription">
             <h4>
               <a
                 target="_blank"
                 href="https://nextjs-project-apollo.vercel.app/"
               >
-                Apollo Coffee{" "}
+                Apollo Coffee - Next.js e-commerce{" "}
               </a>
             </h4>
             <p>
@@ -22,7 +45,6 @@ export default function Projects() {
             <ul className="projectsTech">
               <li>Next.js</li>
               <li>React</li>
-              <li>JavaScript</li>
               <li>CSS</li>
             </ul>
           </div>
@@ -35,17 +57,19 @@ export default function Projects() {
                 target="_blank"
                 href="https://mateuszurban.github.io/project-todo-react/"
               >
-                Daily
+                Daily! - built with TypeScript
               </a>
             </h4>
             <p>
-              Task-management goal-oriented app, with intended use of setting
-              daily goals. MLP created with Tailwind CSS and React.
+              Task management app, based on a personal need for a specific
+              productivity tool functions. Developed with TypeScript and React,
+              ensuring optimal resource consumption and creating intuitive
+              interface qualities.
             </p>
             <ul className="projectsTech">
+              <li>TypeScript</li>
               <li>React</li>
               <li>Tailwind CSS</li>
-              <li>JavaScript</li>
             </ul>
           </div>
         </li>
@@ -55,11 +79,10 @@ export default function Projects() {
             <h4>Personal website</h4>
             <p>
               Elegantly designed site featuring semantic HTML structures,
-              stylish CSS, and React Router for fluid user experience.
+              stylish CSS, and React for fluid user experience.
             </p>
             <ul className="projectsTech">
               <li>React</li>
-              <li>JavaScript</li>
               <li>HTML</li>
               <li>CSS</li>
             </ul>
